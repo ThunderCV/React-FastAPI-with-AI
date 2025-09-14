@@ -1,7 +1,7 @@
 # Secure-AI-App-With-Auth
 
 An end-to-end **full-stack AI-powered application** with authentication.
-This project demonstrates a **FastAPI backend** with AI utilities, **Clerk for authentication**, **Grok webhooks**, and a **React + Vite frontend** for the user interface.
+This project demonstrates a **FastAPI backend** with AI utilities, **Clerk for authentication**, **ngrok for webhook tunneling**, and a **React + Vite frontend** for the user interface.
 
 ---
 
@@ -100,11 +100,42 @@ cd Secure-AI-App-With-Auth
 
 ---
 
+### 4️⃣ Clerk Authentication Setup
+
+1. Create a Clerk account at [https://clerk.com](https://clerk.com)
+2. Copy your **Frontend API Key** and **JWT templates**.
+3. Add them to your `.env` files in both **frontend** and **backend**.
+4. Frontend automatically integrates Clerk UI components for sign-in/sign-up.
+
+---
+
+### 5️⃣ Ngrok for Webhooks
+
+Use **ngrok** to expose your local FastAPI backend for webhook testing.
+
+1. Install ngrok:
+
+   ```bash
+   brew install ngrok
+   ```
+
+   *(or download from [https://ngrok.com/download](https://ngrok.com/download))*
+
+2. Run ngrok on port 8000:
+
+   ```bash
+   ngrok http 8000
+   ```
+
+3. Copy the generated public URL and register it as your **webhook URL** in Clerk or other external services.
+
+---
+
 ## 🔑 Features
 
 * ✅ Secure authentication flow powered by **Clerk**
 * ✅ FastAPI backend with AI utilities (`ai_generator.py`)
-* ✅ Grok integration for **webhook handling**
+* ✅ **ngrok integration for webhook tunneling**
 * ✅ React + Vite frontend for UI
 * ✅ SQLite database integration
 * ✅ Modular architecture (backend + frontend separation)
@@ -117,7 +148,7 @@ cd Secure-AI-App-With-Auth
 * **Frontend**: React, Vite, Tailwind (if used)
 * **Database**: SQLite (default, can be replaced)
 * **Authentication**: Clerk
-* **Webhooks**: Grok
+* **Webhooks**: ngrok
 * **AI**: OpenAI / custom AI module (`ai_generator.py`)
 
 ---
