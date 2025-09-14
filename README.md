@@ -1,7 +1,7 @@
 # Secure-AI-App-With-Auth
 
 An end-to-end **full-stack AI-powered application** with authentication.
-This project demonstrates a **FastAPI backend** with AI utilities and a **React + Vite frontend** for the user interface.
+This project demonstrates a **FastAPI backend** with AI utilities, **Clerk for authentication**, **Grok webhooks**, and a **React + Vite frontend** for the user interface.
 
 ---
 
@@ -102,8 +102,9 @@ cd Secure-AI-App-With-Auth
 
 ## 🔑 Features
 
-* ✅ Secure authentication flow
+* ✅ Secure authentication flow powered by **Clerk**
 * ✅ FastAPI backend with AI utilities (`ai_generator.py`)
+* ✅ Grok integration for **webhook handling**
 * ✅ React + Vite frontend for UI
 * ✅ SQLite database integration
 * ✅ Modular architecture (backend + frontend separation)
@@ -115,6 +116,8 @@ cd Secure-AI-App-With-Auth
 * **Backend**: FastAPI, SQLAlchemy, Uvicorn
 * **Frontend**: React, Vite, Tailwind (if used)
 * **Database**: SQLite (default, can be replaced)
+* **Authentication**: Clerk
+* **Webhooks**: Grok
 * **AI**: OpenAI / custom AI module (`ai_generator.py`)
 
 ---
